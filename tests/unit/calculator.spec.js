@@ -1,13 +1,5 @@
 import { expect } from 'chai'
 import calculator from '@/utils/calculator'
-console.log(calculator, '-------')
-// var stream = (characters, calculatorState = calculator.initalState) => {
-//   return !characters
-//             ? calculatorState
-//             : stream(characters.slice(1),
-//             calculator.nextState(calculatorState, characters[0]))
-// }
-// console.log(stream('4'), '----4')
 
 describe('calculator', () => {
   var stream = (characters, calculatorState = calculator.initialState) => {
@@ -71,6 +63,4 @@ describe('calculator', () => {
   it('8/2=4', () => {
     expect(stream('8/2=').display).to.equal('4')
   })
-
-
 })
